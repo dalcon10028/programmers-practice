@@ -3,7 +3,7 @@
  * https://school.programmers.co.kr/learn/courses/30/lessons/142086
  */
 
-const solution = (s) => {
+export const solution = (s) => {
   const charMap = new Map();
   return s.split("").reduce((answer, char, index) => {
     if (charMap.has(char)) answer.push(index - charMap.get(char));
@@ -12,5 +12,3 @@ const solution = (s) => {
     return answer;
   }, []);
 };
-
-module.exports = solution;
